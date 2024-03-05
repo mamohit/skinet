@@ -8,5 +8,8 @@ namespace Core.Interfaces
     {
         Task<Product> GetProductByIdAsync(int id);
         Task<IReadOnlyList<Product>> GetProductsAsynce();
+        Task<IReadOnlyList<ProductBrand>> GetProductBrandsAsynce();
+        Task<IReadOnlyList<ProductType>> GetProductTypesAsynce();
+
     }
 }

@@ -26,10 +26,12 @@ namespace Infrastructure.Data
             {
                 var productsData = File.ReadAllText("../Infrastructure/Data/SeedData/products.json");
                 var products = JsonSerializer.Deserialize<List<Product>>(productsData);
+                
                 context.Products.AddRange(products);
             }
             
             if(context.ChangeTracker.HasChanges()) await context.SaveChangesAsync();
         }
     }
+    
 }
